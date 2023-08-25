@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Exercicio 09 </title>
+        </head>
+    <center>
+        <body>
+    
+            <h1>Média final SPTECH</h1>
+            Digite seu nome: <input type="text" id="nomeAluno"><br>
+            Nota da continuada: <input type="number" id="notaContinuada"><br>
+            Nota semestral: <input type="number" id="notaSemestral">
+            <br><br>
+            <button onclick="calcularMedia()"> Calcular Media </button>
+        </body>
+    </center>
+    </html>
+
+    <script>
+        
+        function calcularMedia() {
+        
+            var NOME = nomeAluno.value;
+            var CONTINUADA = notaContinuada.value;
+            var SEMESTRAL = notaSemestral.value;
+            var PESO_CONTINUADA = Number(notaContinuada.value) * 4;
+            var PESO_SEMESTRAL = Number(notaSemestral.value) * 6;
+            var MEDIA = (PESO_CONTINUADA + PESO_SEMESTRAL) / (4+6);
+
+            alert("A média de " + NOME + " é de " + MEDIA);
+
+        }
+ 
+    </script>
+
+<style>
+
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #4CAF50;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

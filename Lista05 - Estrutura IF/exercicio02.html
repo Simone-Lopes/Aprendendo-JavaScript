@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 02</title>
+</head>
+<body>
+    <center>
+        <h1>Controle de refrigerantes!</h1>
+    Latas de refrigerante por dia: <input id="input_latas" type="number">
+    <button onclick="resultado()">Quantos refris?</button>
+    
+            <div id="div_resultado">  </div>
+    </center>
+</body>
+</html>
+<script>
+    function resultado() {
+        var latas = Number(input_latas.value);
+        var total = latas * 365;
+
+        div_resultado.innerHTML = (`<br>Você consome ${total} latas por ano.`);
+
+        if ( total >= 500){
+            div_resultado.innerHTML += (` Cuidado com a diabetes!`);
+        }
+
+        }
+</script>

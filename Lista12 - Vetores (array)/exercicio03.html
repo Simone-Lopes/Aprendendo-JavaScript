@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+
+<body>
+    <center>
+        <h1>Lugares que eu já morei</h1>
+        Rua: <input id="input_lugares">
+        <button onclick="cadastrar()">add</button><br>
+        Número de registro: <input type="number" id="input_numero">
+        <button onclick="buscar()"> Buscar bairro </button>
+        <br><br>
+        <div id="div_mensagem"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    var listaMoradias = [];
+
+    function cadastrar() {
+        var moradia = input_lugares.value;
+        listaMoradias.push(moradia);
+    }
+
+    function buscar() {
+        var numero = input_numero.value;
+        
+        if (listaMoradias.length > numero) {
+            div_mensagem.innerHTML += listaMoradias[numero - 1];
+        } else if (listaMoradias.length < numero){
+            div_mensagem.innerHTML += `ERRO: O número informado é maior que a quantidade de moradias`; 
+        }
+    }
+
+</script>
+

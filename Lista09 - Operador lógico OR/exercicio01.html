@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 01</title>
+</head>
+<body>
+    <center>
+        <h1>Frutas de Juliane Joada</h1>
+        Digite o nome da fruta: <input type="text" id="input_fruta">
+        <br/><br/>
+        <button onclick="analisar()">Vai comer?</button>
+    </center>
+</body>
+</html>
+<script>
+    function analisar() {
+        var fruta = input_fruta.value
+
+        if(fruta == 'uva' || fruta == 'abacaxi'){
+            alert('Sim, ela vai comer ' + fruta);
+        }else {
+            alert('Ela não come ' + fruta);
+        }
+    }
+</script>

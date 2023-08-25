@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 01</title>
+</head>
+<body>
+    <center>
+    <span id="span"><img style= "width:200px;" src="https://i.imgflip.com/6quqku.jpg" alt="meme sobre Js"></span>
+    <br>
+    <button onclick="aumentar()">Aumentar a largura</button>
+    <br>
+    <button onclick="reduzir()">Reduzir a largura</button>
+    </center>
+</body>
+</html>
+
+<script>
+    
+    var largura = 200;
+    var mudanca = 10;
+        
+    function aumentar(){    
+
+        span.innerHTML = `<img id="imagem" src="https://i.imgflip.com/6quqku.jpg" alt="meme sobre Js"
+            style= "width: ${largura += mudanca}px;">`;
+        
+    }
+    function reduzir(){  
+        var reduzir = -10;   
+
+        span.innerHTML = `<img id="imagem" src="https://i.imgflip.com/6quqku.jpg" alt="meme sobre Js"
+            style= "width: ${largura -= mudanca}px;">`;
+        
+    }
+
+</script>

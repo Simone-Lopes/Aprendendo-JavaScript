@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Mínimo" type="text" id="input_min">
+    <input placeholder="Máximo" type="text" id="input_max">
+    <input placeholder="Quantidade de Números" type="text" id="input_quantidade">
+    <button onclick="gerar_aleatorio()">Gerar Aleatório (com base nas inputs)</button>
+    <button onclick="pegar_aleatorio()">Exibir número do vetor aleatoriamente</button>
+    <button onclick="gerar()">Gerar Aleatório</button>
+    <button onclick="gerar_50()">Gerar Aleatório Entre 0 e 50</button>
+    <button onclick="gerar_entre_10_25()">Gerar Aleatório Entre 10 e 25</button>
+    <button onclick="gerar_entre_1_6()">Gerar Aleatório Entre 1 e 6</button>
+</body>
+</html>
+
+<script>
+    var numeros = [1, 10, 100, 1000, 10000, 100000, 123, 321, 111, 222, 333];
+
+    function pegar_aleatorio () {
+        var limite = numeros.length - 1; 
+        var quantidade = Number(input_quantidade.value);
+
+        for (var i = 0; i < quantidade; i++) {
+            var aleatorio = Math.random() * limite;
+    
+            var formatado = aleatorio.toFixed(); 
+    
+            console.log(numeros[formatado])
+        }
+    }
+
+    function gerar_aleatorio () {
+        var quantidade = Number(input_quantidade.value);
+        var min = Number(input_min.value);
+        var max = Number(input_max.value);
+        var intervalo = max - min;
+
+        for (var i = 0; i < quantidade; i++) {
+            
+            var aleatorio = Math.random() * intervalo; 
+
+            var resultado = (aleatorio + min).toFixed();
+
+            console.log(resultado)
+        }
+    }
+
+    function gerar() {
+        var aleatorio = Math.random() // 0.000 até 0.99999
+
+        console.log(aleatorio);
+    }
+
+    function gerar_50() {
+        var aleatorio = Math.random() * 50; // 0.000 até 0.99999 -> 0.000 até 49.99999
+
+        console.log(aleatorio);
+    }
+
+    function gerar_entre_10_25() {
+        var min = 10;
+        var max = 25;
+        var intervalo = max - min; // 15
+
+        var aleatorio = Math.random() * intervalo; // 0.0000 até 14.9999
+
+        var resultado = aleatorio + min;           // 10.000 até 24.9999
+
+        // var aleatorio = Math.random() * (25 - 10) + 10;
+
+        console.log(aleatorio);
+    }
+
+    function gerar_entre_1_6() {
+        var min = 1;
+        var max = 6;
+        var intervalo = max - min; // 5
+
+        var aleatorio = Math.random() * intervalo; // 0.0000 até 4.9999
+
+        aleatorio = aleatorio + min;           // 1.000 até 5.9999
+
+        // var aleatorio = Math.random() * (6 - 1) + 1;
+
+        console.log(aleatorio);
+        console.log( Number(aleatorio.toFixed(0)) );
+
+        //    1    ->   1.49999999999999    
+        //    2    ->   1.5   ---   2.49    
+        //    3    ->   2.5   ---   3.49    
+        //    4    ->   3.5   ---   4.49    
+        //    5    ->   4.5   ---   5.49    
+        //    6    ->   5.50000000000000    
+    }
+</script>

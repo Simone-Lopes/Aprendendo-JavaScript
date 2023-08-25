@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+
+<body>
+    <center>
+        <h1>Cuidado com a coca-cola!</h1>
+        Quantas xícaras de café com leite já tomou na vida: <input type="number" id="input_qtdCafe">
+        <button onclick="ver()">Ver quantidade</button>
+        <br>
+        <div id="div_mensagem"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+
+    function ver() {
+
+    var quantidade = Number(input_qtdCafe.value);
+    var contador = 1;
+
+    div_mensagem.innerHTML = "";
+
+    while (contador <= quantidade) {
+
+        div_mensagem.innerHTML += `
+        <img src="https://img.freepik.com/fotos-premium/colher-de-cha-cheia-de-acucar_1871-391.jpg" alt="Colher de Leite" style="width: 200px">
+        <img src="https://w7.pngwing.com/pngs/563/535/png-transparent-coffee-in-spoon-coffee-sago-palm-landscape-arecaceae-coffee-powder-coffee-shop-pest-control-coffee.png" alt="Colher de Café" style="width: 200px">
+        <img src="https://w7.pngwing.com/pngs/563/535/png-transparent-coffee-in-spoon-coffee-sago-palm-landscape-arecaceae-coffee-powder-coffee-shop-pest-control-coffee.png" alt="Colher de Café" style="width: 200px">`;
+        contador += 1;
+
+    }
+
+    contador = 1;
+
+}
+</script>
+

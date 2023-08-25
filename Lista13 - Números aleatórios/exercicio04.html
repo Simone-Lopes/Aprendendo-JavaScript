@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+
+<body>
+    <center>
+        <h1>Sorteie a nota do aluno!</h1>
+        <button onclick="sortear()">Sortear Nota</button>
+        <div class="div_mensagem" id="div_mensagem"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+    var listaDado = []
+
+    function sortear() {
+        var aleatorio = Math.random() * 10;
+        var formatado = Number(aleatorio.toFixed(2));
+
+
+        div_mensagem.innerHTML = `<br><img src="${listaDado[formatado]}" alt="">`
+    }
+
+</script>
+
+<style>
+    .div_mensagem img {
+        height: 150px;
+    }
+</style>

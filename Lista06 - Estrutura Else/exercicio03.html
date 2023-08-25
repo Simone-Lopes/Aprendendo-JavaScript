@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>  
+<body>
+    <center>
+        <h1>Promoção na Bom Doce!</h1>
+        <br>
+        Digite a quantidade de chocolates: <input id="input_quant" type="number"><br>
+        <br>
+        <button onclick="comprar()">Comprar</button>
+        <br><br>
+        <div id="div_resultado"></div>
+    </center>
+    
+</body>
+</html>
+<script>
+    function comprar(){
+        var qtd = (input_quant.value);
+        var total = 0;
+        div_resultado.style.border = "2px solid rgb(6, 6, 54)"
+
+        if(qtd > 12){
+            var total = 2.50 * qtd;
+            div_resultado.innerHTML = ` O valor da sua compra foi de R$${total}`
+        } else{
+            var total = 3.00 * qtd;
+            div_resultado.innerHTML = ` O valor da sua compra foi de R$${total}`
+        }
+    }
+</script>
+
+<style>
+    button{
+        background-color: rgb(6, 6, 54);
+        color: white;
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    input{
+        border: none;
+        border-bottom: 2px solid rgb(6, 6, 54);
+    }
+    h1 {
+        color:  rgb(6, 6, 54);
+    }
+    #div_resultado{
+        height: 25px;
+        width: 550px;
+    }
+</style>

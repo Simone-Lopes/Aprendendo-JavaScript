@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 03</title>
+</head>
+
+<body>
+    <center>
+        <h1>Programa do tio Patinhas!</h1>
+        <br>
+        <div id="div_mensagem">Total guardado no cofrinho: R$0
+            <br>Depósitos efetuados: 0
+            <br>Retiradas efetuadas: 0
+        </div>
+        <br>
+        <button onclick="depositar50()">Depositar 0,50</button>
+        <button onclick="depositar200()">Depositar 2,00</button>
+        <button onclick="retirar50()">Retirar 0,50</button>
+        <br>
+        Insira um valor: <input type="numer" id="input_retirar">
+        <button onclick="retirar()">Retirar</button>
+
+    </center>
+
+</body>
+
+</html>
+<script>
+    var total = 0;
+    var deposito = 0;
+    var retirada = 0;
+
+    function mensagem() {
+        div_mensagem.innerHTML = `Total guardado no cofrinho: R$${total}
+                          <br>Depósitos efetuados: ${deposito}
+                          <br>Retiradas efetuadas: ${retirada}`
+    }
+
+    function depositar50() {
+        total = total + 0.50
+        deposito++
+        mensagem();
+    }
+
+    function depositar200() {
+        total = total + 2.00
+        deposito++
+        mensagem();
+    }
+
+    function retirar50() {
+        total = total - 0.50
+        retirada++
+        mensagem();
+    }
+
+    function retirar() {
+        var retirar = input_retirar.value
+        total = total - retirar
+        retirada++
+        mensagem();
+    }
+</script>

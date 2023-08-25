@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    <center>
+        <h1>Hora da tabuada!</h1>
+
+        Escolha a tabuada:
+        <select id=select_tabuada>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <br><br>
+        <button onclick="contar()">Ver tabuada</button>
+        <div id="div_resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function contar() {
+
+        var contador = 1;
+        var tabuada = Number(select_tabuada.value);
+
+        div_resultado.innerHTML = `<h1>Tabuada do ${tabuada}</h1>`
+            while (contador <= 12) {
+                var resultado = tabuada * contador;
+                    div_resultado.innerHTML += `
+                    ${tabuada} x ${contador} = ${resultado} <br>`;
+                    contador += 1
+                };
+                
+            }
+</script>

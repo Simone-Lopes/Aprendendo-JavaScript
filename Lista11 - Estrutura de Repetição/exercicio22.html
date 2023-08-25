@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 24</title>
+</head>
+
+<body>
+    <center>
+        <h1>Números Primos</h1>
+        Digite um número entre 0 e 100 <input type="number" id="input_number">
+        <br>
+        <button onclick="resultado()">Ver divisores</button>
+        <br>
+        <div id="div_resultado"></div>
+        <br>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        var numero = Number(input_number.value);
+
+        if (numero < 0 || numero > 100) {
+            alert("ERRO: O número deve estar entre 0 e 100");
+
+        } else {
+            var numPrimo = 0;
+            div_resultado.innerHTML += `Divisores do número ${numero}: <br>`;
+
+            for (var contador = 0; contador <= numero; contador++) {
+
+                if (numero % contador == 0) {
+                    div_resultado.innerHTML += `${contador}<br>`;
+                    numPrimo += 1;
+                }
+            }
+        }
+        // if(){
+            
+        // }
+    }
+</script>
+
+<!-- 25. Refaça a questão anterior, de tal forma que: 
+a) Ao exibir os divisores do número informado, caso o número seja divisível somente por 1 e por ele mesmo, exiba abaixo: 
+    "O número X é um número primo," -->

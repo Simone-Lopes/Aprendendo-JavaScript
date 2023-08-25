@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    
+    <html lang="en">
+    
+        <head>
+            
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Exercicio 15</title>
+        
+        </head>
+
+        <body>
+                <h1> Elefantes e mais elefantes... </h1>
+                <p>Insira a quantidade de elefantes</p>
+                <input type="number" id="input_qtd_elefantes">
+
+                <button onclick="elefantes()">Atazanar a médium</button>
+
+            <div id="div_mensagem"></div>
+
+        </body>
+    
+    </html>
+
+    <script>
+
+        function elefantes(){
+
+            var elefantes = Number(input_qtd_elefantes.value);
+            var incomodam = "incomodam,";
+
+            var contagem = 1;
+            var quanto = 1;
+            var frase_incomodam = "";
+
+            var numero = 1;
+
+            while(numero < elefantes){
+                div_mensagem.innerHTML += `
+                1 elefante incomoda muita gente! <br> 
+                `
+                while (contagem <= numero) {
+                    while(quanto <= contagem ){
+                        frase_incomodam += incomodam;
+                        quanto +=1;
+                    }
+                    div_mensagem.innerHTML += `
+                    ${contagem + 1} elefantes ${frase_incomodam + incomodam} muito mais! <br> 
+                    `
+                    contagem +=1 ;
+                };     
+                numero += 1;
+            }
+
+        }
+
+    </script>

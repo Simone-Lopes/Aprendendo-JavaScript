@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de Loja Eletrônica - EXERCICIO 15</title>
+
+</head>
+<body>
+  <center>
+  <h1>Sistema de Loja Eletrônica</h1>
+
+  Nome do produto: <input type="text" id="input_nome">
+  <br> <br>
+  Preço de compra: <input type="number" id="input_precoCompra">
+  <br> <br>
+  <button onclick="cadastrarProduto()">Cadastrar</button>
+  <button onclick="exibirRelatorioEstoque()">Relatório de estoque</button>
+  <div id="relatorio"></div>
+</center>
+</body>
+</html>
+  <script>
+    var produtos = [];
+
+    function cadastrarProduto() {
+      var nome = (input_nome.value)
+      var precoCompra = parseFloat(input_precoCompra.value);
+      var precoVenda = precoCompra * 1.25;
+
+      var produto = {
+        nome: nome,
+        precoCompra: precoCompra,
+        precoVenda: precoVenda
+      };
+
+      produtos.push(produto); 
+      nome.value = "";
+      precoCompra.value = "";
+
+      alert("Produto cadastrado com sucesso!");
+    }
+
+    function exibirRelatorioEstoque() {
+     
+      var precoTotal = 0;
+      var precoMedio = 0;
+      var produtoMaisCaro = produtos[0];
+      var produtoMaisBarato = produtos[0];
+
+      for (var contador = 0; contador < produtos.length; contador++) {
+        var produto = produtos[contador];
+
+        relatorio.innerHTML += `<br>Produto ${(contador + 1)}: ${produto.nome} <br>
+        Preço de compra: R$ ${produto.precoCompra.toFixed(2)}  Vender por R$ ${produto.precoVenda.toFixed(2)} <br><br>`
+
+        precoTotal += produto.precoCompra;
+
+        if (produto.precoCompra > produtoMaisCaro.precoCompra) {
+          produtoMaisCaro = produto;
+        }
+
+        if (produto.precoCompra < produtoMaisBarato.precoCompra) {
+          produtoMaisBarato = produto;
+        }
+      }
+
+      precoMedio = precoTotal / produtos.length;
+
+      relatorio.innerHTML += `Nome do produto mais caro: ${produtoMaisCaro.nome} <br>
+      Nome do produto mais barato: ${produtoMaisBarato.nome} <br>
+      Soma dos preços de compra dos produtos: R$ ${precoTotal.toFixed(2)} <br>
+      Média de preço de venda dos produtos: R$ ${precoMedio.toFixed(2)}`
+
+    
+    }
+  </script>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 14</title>
+</head>
+
+<body>
+  <center>
+    <h1>Sistema de loja eletrônica</h1>
+    Nome do produto:<input type="text" id="input_nome">
+    <br>
+    Preço do produto <input type="number" id="input_preco">
+    <br> <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="relatorio()">Relatório de estoque</button>
+    <div id="div_mensagem"></div>
+
+  </center>
+</body>
+
+</html>
+<script>
+
+  var listaNome = [];
+  var listaPreco = [];
+
+  function cadastrar() {
+    var nome = input_nome.value;
+    var preco = Number(input_preco.value);
+
+    listaNome.push(nome);
+    listaPreco.push(preco);
+  }
+
+  function relatorio() {
+
+    div_mensagem.innerHTML = `<br>
+        Total de produtos: ${listaNome.length}<br>`;
+
+    var maisCaro = listaPreco[0];
+    var maisBarato = listaPreco[0];
+    var nomeCaro = listaNome[0];
+    var nomeBarato = listaNome[0];
+
+    var somatoria = 0;
+    var somatoriaVenda = 0;
+
+
+    for (var posicao = 0; posicao < listaNome.length; posicao += 1) {
+
+      var precoCompra = listaPreco[posicao];
+      var valorVenda = precoCompra * 1.25;
+
+      somatoria += precoCompra;
+      somatoriaVenda += valorVenda;
+
+      div_mensagem.innerHTML += `
+        <br> Produto ${posicao + 1}: ${listaNome[posicao]}
+        <br> Preço de compra: R$${precoCompra}.
+        Vender por R$${valorVenda} <br><br>
+        `;
+
+      if (precoCompra > maisCaro) {
+        maisCaro = precoCompra;
+        nomeCaro = listaNome[posicao];
+      }
+
+      if (precoCompra < maisBarato) {
+        maisBarato = precoCompra;
+        nomeBarato = listaNome[posicao];
+
+      }
+    }
+    var mediaPrecoVenda = somatoria / listaPreco.length;
+
+    div_mensagem.innerHTML += ` A soma dos preços de compra é: R$${somatoria}
+    <br>
+    A média de preços de venda é: ${mediaPrecoVenda}%.
+        `;
+  }
+</script>

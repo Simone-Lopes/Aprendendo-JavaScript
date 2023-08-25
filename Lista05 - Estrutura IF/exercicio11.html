@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    <center>
+        <h1>A grande familía!</h1>
+        Digite a quantidade de filhos: <input id="input_qtdFilhos" type="number"><br><br>
+        <button onclick="analisar()"> Analisar familia </button><br><br>
+
+        <div id="div_resultado">  </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+    var filhos = Number(input_qtdFilhos.value);
+
+    if(filhos != 0){
+        if(filhos >= 1){
+            div_resultado.innerHTML = `Não tem TV <br>`
+        }
+        if(filhos >= 2){
+            div_resultado.innerHTML += `Não tem internet <br>`
+        }
+        if(filhos >= 3){
+            div_resultado.innerHTML += `Não tem video-game <br>`
+        }
+        if(filhos >= 4){
+            div_resultado.innerHTML += `Não tem Netflix <br><br>`
+        }
+    }
+}
+</script>

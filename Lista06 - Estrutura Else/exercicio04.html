@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <center>
+        <h1> Aluno ou turista?</h1>
+        <br>
+        Solicite a frequência do aluno: <input id="input_freq" type="number"><br>
+        <br>
+        <button onclick="frequencia()">Analisar Frequência</button>
+        <br><br>
+        <div id="div_resultado"></div> 
+    </center>
+    
+</body>
+</html>
+<script>
+    function frequencia(){
+        var frequencia = (input_freq.value);
+
+        if(frequencia < 50){
+            div_resultado.innerHTML = `<img src="https://s.calendarr.com/upload/datas/di/at/dia-turista_c.jpg" alt="Aluno turista">
+                <br><h1>Turista!</h1>` 
+        } else{
+            div_resultado.innerHTML = ` <img src="https://media.istockphoto.com/id/961768024/pt/foto/studious-student-learning-taking-notes-in-the-night.jpg?s=170667a&w=0&k=20&c=caev8RFk5JxqGDwkF-z4RHsASKCEvXqlqpf6chF7GZ8=" alt="Aluno estudioso">
+            <br><h1>Aluno!</h1>` 
+        }
+    }
+</script>
+<style>
+    button{
+        background-color: rgb(6, 6, 54);
+        color: white;
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    input{
+        border: none;
+        border-bottom: 2px solid rgb(6, 6, 54);
+    }
+    h1 {
+        color:  rgb(6, 6, 54);
+    }
+    #div_resultado{
+        height: 25px;
+        width: 550px;
+    }
+    img{
+        height: 300px;
+        width: 500px;
+    }
+</style>

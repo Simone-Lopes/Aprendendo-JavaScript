@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 03</title>
+</head>
+<body>
+    <center>
+        <h1>Ajuda emergencial ao Covid19</h1>
+        Digite a renda individual: <input type="number" id="input_individual"/>
+        <br/>
+        Digite a renda familiar: <input type="number" id="input_familiar"/>
+        <br/><br/>
+        <button onclick="analisar()">Terei o benefício?</button>
+    </center>
+</body>
+</html>
+<script>
+    function analisar() {
+        var indiv = Number(input_individual.value)
+        var famil = Number(input_familiar.value)
+
+        if(indiv <= 2000 || famil <= 3000){
+            alert('Você terá direito ao auxílio!');
+        }else {
+            alert('Sem direito ao auxílio.');
+        }
+    }
+</script>

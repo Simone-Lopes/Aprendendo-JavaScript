@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Exercicio 08 </title>
+        </head>
+    <center>
+        <body>
+    
+            <h1>Dragon Ball</h1>
+            Digite o nome do guerreiro: <input type="text" id="nomeGuerreiro"><br>
+            Quantidade de KI normal:<input type="number" id="quantKi"><br>
+            <br>
+            <button onclick= "calcular_ki()"> Ver KI em cada forma </button>
+
+        </body>
+    </center>
+    </html>
+
+    <script>
+
+        function calcular_ki() {
+
+            var KI = quantKi.value;
+            var NOME = nomeGuerreiro.value;
+            var KI_1 = Number(quantKi.value) * 50;
+            var KI_2 = Number(quantKi.value) * 100;
+
+            alert("Você tem " + KI_1 + " de KI na forma Super Sayajin, " + NOME);
+            alert("Você tem " + KI_2 + " de KI na forma Super Sayajin 2, " + NOME);
+
+
+        }
+
+    </script>
+
+<style>
+
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #4CAF50;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

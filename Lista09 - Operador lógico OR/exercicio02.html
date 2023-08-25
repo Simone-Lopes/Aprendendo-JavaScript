@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 02</title>
+</head>
+<body>
+    <center>
+        <h1>Faculdade Mentes Brilhantes</h1>
+        Digite a nota do enem: <input type="number" id="input_enem" max="4" min="1"/>
+        <br/>
+        Digite a nota do vestibular interno: <input type="number" id="input_vestibular"/>
+        <br/><br/>
+        <button onclick="analisar()">Avaliação</button>
+    </center>
+</body>
+</html>
+<script>
+    function analisar() {
+        var enem = Number(input_enem.value)
+        var vest = Number(input_vestibular.value)
+
+        if(enem >= 800 || vest >= 700){
+            alert('Parabéns, aprovado!');
+        }else {
+            alert('Tente semestre que vem!');
+        }
+    }
+</script>

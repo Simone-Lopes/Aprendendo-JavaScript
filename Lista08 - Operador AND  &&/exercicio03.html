@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <center>
+        <h1>Validação de notas!</h1>
+    Digite sua nota: <input type="number" id="input_nota"/>
+    <br/> <br/>
+    <button onclick="situacao()"> Avaliar nota </button>
+    </center>
+</body>
+</html>
+<script>
+    function situacao() {
+        var nota = Number(input_nota.value);
+
+        if(nota >= 0 && nota <= 10){
+            alert("Nota válida!");
+        }else{
+            alert("Onde já se viu nota menor que 0 e maior que 10?!")
+        }
+
+    }
+</script>
+</script>
+
+<style>
+    button{
+        background-color: rgb(6, 6, 54);
+        color: white;
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid rgb(6, 6, 54);
+    }
+    h1 {
+        color:  rgb(6, 6, 54);
+        
+    }
+</style>

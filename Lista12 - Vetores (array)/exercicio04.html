@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+
+<body>
+    <center>
+        <h1>Filmes favoritos</h1>
+        filmes favoritos: <input id="input_filmes">
+        <button onclick="cadastrar()">add</button><br>
+        <br><br>
+        <button onclick="favoritos()">ver favoritos</button><br>
+        <div id="div_mensagem"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    var listaFilmes = [];
+
+    function cadastrar() {
+       
+        var filme = input_filmes.value;
+        listaFilmes.push(`<br>${filme}`);
+            
+    }
+
+    function favoritos() {
+            div_mensagem.innerHTML = listaFilmes;
+            div_mensagem.innerHTML += `<br><br><b>Total:</b> ${listaFilmes.length}`
+            div_mensagem.innerHTML += `<br><br><b>O que mais gosta:</b> ${listaFilmes[0]}`
+            div_mensagem.innerHTML += `<br><br><b>O que menos gosta:</b> ${listaFilmes[listaFilmes.length - 1]}`
+    }
+
+</script>

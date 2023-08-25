@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 04</title>
+</head>
+<body>
+    <center>
+    <h1> Pizzaria da Simone! </h1>
+    Qual o sabor? <input type="text" id="sabor_pizza"><br>
+    Qual o preço? <input type="number" id="valor_pizza"><br>
+    Quantos amigos vão comer? <input type="number" id="amigos_comer"><br>
+    <br>
+    <button onclick="valor()" id="botao">Ver Valor por Amigo</button>
+
+    <br><br>
+    <h3>
+        <div id="div_manipulavel">
+
+         </div>
+    </h3>
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    function valor() {
+
+        div_manipulavel.style.background = "#ffff80";
+        div_manipulavel.style.border = "2px solid black";
+
+
+        var valor = Number(valor_pizza.value);
+        var amigos = Number(amigos_comer.value);
+        var sabor = sabor_pizza.value;
+
+        var caixinha = (valor * 10) / 100;
+        var total = valor + caixinha;
+
+        var divisao = total / amigos;
+
+        div_manipulavel.innerHTML = (`<br> Cada um dos amigos vai pagar R$${divisao} pela pizza sabor ${sabor}.
+        <h6> OBS: Esse valor já incluí os 10% de caixinha. </h6 >`);
+    }
+
+</script>
+
+<style>
+
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #ffd900;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

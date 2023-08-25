@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF e ELSE</title>
+</head>
+
+<body>
+    <center>
+        <h1> Monitoração de tempertaura</h1>
+        <br>
+        Digite a temperatura : <input id="input_temperatura" type="number">°C<br>
+        <br>
+        <button style="background-color: rgb(255, 0, 0); height: 50px; width: 200px ; border-radius: 20px; color: white; border: none;" onclick="verificar()">Verificar Clima</button>
+        <br><br>
+
+        <div style="height: 25px; width: 300px; margin: 15px; border-radius: 25px; color: white; font-size: 18px;" id="div_resultado" ></div>
+    </center>
+
+</body>
+
+</html>
+<script>
+    function verificar() {
+        var temp = Number(input_temperatura.value);
+
+        if (temp < 10) {
+            div_resultado.innerHTML = `A temperatura está muito baixa!`;
+            div_resultado.style.background= "blue";
+        } else if (temp > 20) {
+                div_resultado.innerHTML = `A temperatura está muito alta!`;
+                div_resultado.style.background= "red";
+            } else {
+                div_resultado.innerHTML = `A temperatura está ideal!`;
+                div_resultado.style.background= "green";
+            }
+
+
+        }
+
+</script>

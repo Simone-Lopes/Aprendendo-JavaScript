@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+
+<body>
+    <center>
+        <h1>Cuidado com a coca-cola!</h1>
+        Quantas Coca-Cola você já tomou: <input type="number" id="input_qtdCoca">
+        <button onclick="ver()">Ver quantidade</button>
+        <br>
+        <div id="div_mensagem"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+
+    function ver() {
+
+    var quantidade = Number(input_qtdCoca.value);
+    var contador = 1;
+
+    div_mensagem.innerHTML = "";
+
+    while (contador <= quantidade) {
+
+        div_mensagem.innerHTML += `<img src="https://www.imagensempng.com.br/wp-content/uploads/2022/01/2442.png" alt="lata de coca colas" style= "width:200px" >`
+        contador += 1;
+
+    }
+
+    contador = 1;
+
+}
+</script>

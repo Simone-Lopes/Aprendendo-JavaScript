@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+
+<body>
+    <center>
+        <h1>Sistema de loja eletrônica</h1>
+        Nome do produto:<input type="text" id="input_nome">
+        <br>
+        Preço do produto <input type="number" id="input_preco">
+        <br> <br>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="relatorio()">Relatório de estoque</button>
+        <div id="div_mensagem"></div>
+
+    </center>
+</body>
+
+</html>
+<script>
+
+    var listaNome = [];
+    var listaPreco = [];
+
+    function cadastrar() {
+        var nome = input_nome.value;
+        var preco = Number(input_preco.value);
+
+        listaNome.push(nome);
+        listaPreco.push(preco);
+    }
+
+    function relatorio() {
+
+        div_mensagem.innerHTML = `<br>
+        Total de produtos: ${listaNome.length}`;
+
+
+        for (var posicao = 0; posicao < listaNome.length; posicao+=1) {
+
+            var precoCompra = listaPreco[posicao];
+            var valorVenda = precoCompra * 1.25;
+
+            div_mensagem.innerHTML += `
+        <br> Produto ${posicao + 1}: ${listaNome[posicao]}
+        <br> Preço de compra: R$${precoCompra}.
+        Vender por R$${valorVenda} <br><br>
+        `;
+        }
+    }
+</script>

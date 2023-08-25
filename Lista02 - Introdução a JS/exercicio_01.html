@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 01</title>
+</head>
+<body>
+    <center>
+    <h1>Registro</h1>
+    <h3>Cidade Natal: <input type="text" id="cidadeN">
+    <br>
+    Ano de nascimento: <input type="number" id="anoNasc">
+    <br><br></h3>
+    <button onclick="exibirMsg()"> Cadastrar! </button>
+    </center>
+</body>
+</html>
+
+<script>
+    function exibirMsg() {
+        alert("Você nasceu na cidade de " + cidadeN.value + " em " + anoNasc.value )
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <center>
+        <h1>Monitoração Bancária</h1>
+        Digite seu saldo no banco: <input id="input_saldo" type="number"><br><br>
+        <button onclick="calcular()"> Verificar Finanças </button><br><br>
+
+        <div id="div_resultado">  </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+    var saldo = Number(input_saldo.value);
+
+    if(saldo == 0){
+        div_resultado.innerHTML= `<span style="color:black">Conta zerada.</span>`
+    }
+    if(saldo < 0){
+        div_resultado.innerHTML= `<span style="color:red">Está devendo!!!.</span>`
+    }
+    if(saldo > 0){
+        div_resultado.innerHTML= `<span style="color:blue">Saldo positivo! :)</span>`
+    }
+}
+</script>

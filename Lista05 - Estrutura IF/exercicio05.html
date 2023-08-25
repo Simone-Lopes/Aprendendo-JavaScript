@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <center>
+        <h1>Calcule sua conta de luz!</h1>
+        Quantos kWh no mês: <input id="input_qtd_kwh" type="number"><br>
+        <button onclick="calcular()"> Calcular!</button>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var kwh = Number(input_qtd_kwh.value);
+        var total = kwh * 0.85;
+
+        if(kwh < 100){
+            var desconto = total - (total * 0.10);
+             alert ("Com 10% de desconto, você pagará R$" + desconto);
+        }
+
+        if (kwh > 100) {
+            alert("O valor total da conta a ser paga é de " + total);
+             }
+    }
+</script>

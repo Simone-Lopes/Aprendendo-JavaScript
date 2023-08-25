@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - Introdução a JS</title>
+</head>
+<body>
+
+    <button onclick="dar_boas_vindas()">Exibir mensagem de Boas-Vindas!</button>
+    <br> <br>
+    Insira uma mensagem: <input id="input_mensagem">
+    <button onclick="exibir_mensagem()">Exibir mensagem digitada:</button>
+    <br>
+</body>
+</html>
+
+<script>
+    // alert ("It's five o'clock")
+
+    function dar_boas_vindas(){
+        alert("Seja bem-vindo!")
+    }
+
+    function exibir_mensagem(){
+        alert("Sua mensagem foi: " + input_mensagem.value)
+    }
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+
+<body>
+    <center>
+        <h1>Nutricionista na pandemia! </h1>
+        <br />
+        Quantos pãos francês por dia?<input id="input_qtdPao" type="number" /> <br/>
+        Quantos pacotes de bolacha recheada por dia?<input id="input_qtdBolacha" type="number" /><br/>
+        Quantos copos de achocolatado por dia?<input id="input_qtdAchocolatado" type="number" />
+        <br /><br />
+        <button onclick="calcular()"> Verificar calorias </button>
+        <br /><br />
+
+        <div id="div_resultado"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var pao = Number(input_qtdPao.value); 
+        var bolacha = Number(input_qtdBolacha.value);
+        var achoc = Number(input_qtdAchocolatado.value);
+
+        var calPao = pao * 50;
+        var calBolacha = bolacha * 80;
+        var calAchoc = achoc * 70;
+
+        var total = calAchoc + calBolacha + calPao;
+
+        if(total < 200){
+            div_resultado.innerHTML = `Parabéns, vai sair em forma da quarentena!`
+
+        } else if(total <= 400){
+            div_resultado.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+        }else{
+            div_resultado.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;;
+        }
+    }
+</script>

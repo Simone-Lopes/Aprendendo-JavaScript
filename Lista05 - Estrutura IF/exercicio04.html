@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 04</title>
+</head>
+<body>
+    <center>
+        <h1>Pizzaria da Sisi!</h1>
+    Digite o valor da pizza: <input id="input_valorPizza" type="number"><br>
+    Digite a quantidade de amigos: <input id="input_qtdAmigos" type="number"><br>
+    <br>
+    <button onclick="calcular()">Rola a pizza?</button><br><br>
+    
+            <div id="div_resultado">  </div>
+    </center>
+</body>
+</html>
+<script>
+    function calcular() {
+        var valor = Number(input_valorPizza.value);
+        var amigos = Number(input_qtdAmigos.value);
+
+        var divisao = (valor / amigos);
+
+        div_resultado.innerHTML = (`Cada amigo vai pagar R$${divisao} <br>`);
+
+        if ( divisao > 20){
+            div_resultado.innerHTML += (`Deu ruim, caro demais!`);
+        }
+
+        }
+</script>

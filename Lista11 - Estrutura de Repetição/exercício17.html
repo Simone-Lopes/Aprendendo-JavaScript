@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17</title>
+</head>
+
+<body>
+    <center>
+
+        <h1>Dirigindo o meu carro!</h1>
+        Insira qual a capacidade do carro: <input type="number" id="input_capacidade">
+        <br>
+        Insira a quantidade de pessoas que vão entrar no carro: <input type="number" id="input_pessoas">
+        <br><br>
+        <button onclick="analisar()">#PartiuCarona</button>
+        <br>
+
+        <div id="div_msg"></div>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var quantidade = 0
+        var pessoas = Number(input_pessoas.value)
+        var capacidade = Number(input_capacidade.value)
+
+        while (quantidade < pessoas) {
+            quantidade += 1
+            if (quantidade == 1) {
+                div_msg.innerHTML += `Entrou o ${quantidade}°. passageiro (motorista)<br>`
+            }
+            if (quantidade > 1 && quantidade <= capacidade) {
+                div_msg.innerHTML += `Entrou o ${quantidade}°. passageiro<br>`
+            }
+            if (quantidade > capacidade) {
+                div_msg.innerHTML += `O ${quantidade}°. passageiro terá que esperar<br>`
+            }
+        }
+    }
+</script>
+<style>
+    button {
+        width: 200px;
+        height: 50px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(42, 152, 255);
+        color: white;
+        margin: 10px;
+    }
+
+    h1 {
+        color: rgb(42, 152, 255);
+    }
+</style>

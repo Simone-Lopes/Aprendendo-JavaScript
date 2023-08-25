@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+<body>
+    <button onclick="sortearImagem()">Sortear Imagens</button>
+    <br><br>
+    <img src="" alt="" id="imagem_sorteada">
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+
+    var listaImagem = [
+    'https://i.pinimg.com/originals/cb/5c/51/cb5c51dc54fdf86d94f98ead6bf8926f.jpg',
+    'https://static.wikia.nocookie.net/oclubedaswinx/images/f/fc/Flora_Charmix.png/revision/latest?cb=20141224150448&path-prefix=pt-br',
+    'https://static.wikia.nocookie.net/winx/images/a/af/Musa.png/revision/latest?cb=20180902200027&path-prefix=pt',
+    'https://static.wikia.nocookie.net/oclubedaswinx/images/4/42/Stella_Charmix.png/revision/latest?cb=20141224150445&path-prefix=pt-br'
+];
+
+    function sortearImagem(){
+        if(listaImagem.length > 0){
+
+            var sorteada = parseInt(Math.random() * listaImagem.length);
+            console.log(sorteada);
+
+            imagem_sorteada.src = listaImagem[sorteada];
+
+            listaImagem.splice(sorteada, 1);
+        }else{
+            div_mensagem.innerHTML= `Não há mais fotos para sortear...`
+        }
+
+    }
+        
+</script>
+<style>
+    #imagem_sorteada{
+        height: 250px;
+    }
+</style>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+    <center>
+        <h1>Classe Social de Tuvalu!</h1>
+        <br />
+        Digite sua renda familiar: <input id="input_rendaFamiliar" type="number" />
+        <br /><br />
+        <button onclick="analisar()"> Analisar renda</button>
+        <br /><br />
+
+        <div id="div_resultado"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var renda = Number(input_rendaFamiliar.value);
+
+        if(renda <= 250){
+            div_resultado.innerHTML = `Classe E`
+        } else if (renda <= 900){
+            div_resultado.innerHTML = `Classe D`
+        } else if(renda <= 2500){
+            div_resultado.innerHTML = `Classe C`
+        }else if(renda <= 9500){
+            div_resultado.innerHTML = `Classe B`
+        }else{
+            div_resultado.innerHTML = `Classe A`
+        }
+    }
+</script>

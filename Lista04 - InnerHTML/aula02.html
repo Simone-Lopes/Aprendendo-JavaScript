@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+
+    <input id="input_mensagem"><br>
+    <button onclick="alterar_div()"> Alterar Div </button>
+    <button onclick="visualizar_conteudo()"> Visualizar conteudo </button>
+    <button onclick="incrementar()">Incrementar Frase</button>
+    <button onclick="exibir_mensagem()">Exibir mensagem</button>
+
+    <div id="div_manipulavel">
+        O corpo da minha div é esse.
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    function visualizar_conteudo(){
+        alert (div_manipulavel.innerHTML);
+    }
+
+    function alterar_div(){
+        var mensagem = input_mensagem.value;
+        div_manipulavel.innerHTML = mensagem;
+    }
+
+    function incrementar(){
+        var mensagem = input_mensagem.value;
+        div_manipulavel.innerHTML = div_manipulavel.innerHTML + mensagem;
+
+    }
+    function exibir_mensagem(){
+        var mensagem = input_mensagem.value;
+        div_manipulavel.innerHTML = (`A mensagem é: ${mensagem} !`);
+       // div_manipulavel.innerHTML = ("A mensagem é: " + mensagem);
+    }
+
+</script>
+
+<!--oi simons, o gustavo passou aqui
+ luiz é lindo--> 

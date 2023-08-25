@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 02</title>
+</head>
+<body>
+    <center>
+    <h1> Eleições </h1>
+    Votos do Candidato A: <input type="number" id="votos_A"><br>
+    Votos do Candidato B: <input type="number" id="votos_B"><br>
+    Votos em branco: <input type="number" id="votos_brancos"><br>
+    Votos nulos: <input type="number" id="votos_nulos"><br>
+    <br>
+    <button onclick="eleicao()">Resultado da Eleição</button>
+
+    <br><br>
+
+        <div id="div_manipulavel">
+
+         </div>
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    function eleicao() {
+
+        var A = Number(votos_A.value);
+        var B = Number(votos_B.value);
+        var brancos = Number(votos_brancos.value);
+        var nulos = Number(votos_nulos.value);
+
+        var total = A + B + brancos + nulos;
+        var invalidos = brancos + nulos;
+
+        var porc_A = (A / total) * 100;
+        var porc_B = (B / total) * 100;
+        var porc_invalidos = (invalidos / total) * 100;
+
+        div_manipulavel.innerHTML = (`<b>Total de votos: <u>${total}</u></b> <br>
+        <b>Candidato A: </b> ${porc_A}% (${A} votos) <br>
+        <b>Candidato B: </b> ${porc_B}% (${B} votos)<br>
+        <b>Invalidos: </b> ${porc_invalidos}% (${invalidos} votos)`);
+    }
+
+</script>
+

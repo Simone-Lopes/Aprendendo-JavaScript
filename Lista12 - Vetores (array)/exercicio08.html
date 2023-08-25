@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+
+<body>
+    <center>
+        <h1>Cadastrando Alunos</h1>
+        Digite o nome do aluno: <input type="text" id="input_nomes">
+        <br><br>
+        <button onclick="cadastrarAluno()">Cadastrar</button>
+        <div id="div_alunos"></div>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+
+    var listaAlunos = [];
+
+    function cadastrarAluno() {
+        var aluno = input_nomes.value;
+        listaAlunos.unshift(aluno);
+        
+        div_alunos.innerHTML = ''
+
+        
+        for (var posicao = 0; posicao < listaAlunos.length; posicao++) {
+            var alunoLista = listaAlunos[posicao];
+            div_alunos.innerHTML += `${alunoLista}<br>`;
+            
+        }
+    }
+</script>

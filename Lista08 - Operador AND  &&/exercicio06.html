@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+
+<body>
+    <center>
+        <h1>Frequência de alunos!</h1>
+        Digite a nota do aluno: <input type="number" id="input_nota" /><br/>
+        Digite a frequência do aluno: <input type="number" id="input_frequencia" />%
+        <br /> <br />
+        <button onclick="situacao()"> Avaliar aluno </button>
+    </center>
+</body>
+
+</html>
+<script>
+    function situacao() {
+        var nota = Number(input_nota.value);
+        var freq = Number(input_frequencia.value);
+
+        if (nota >= 6 && freq >= 75) {
+            alert("Parabéns, aprovado!");
+        } else if(nota > 10) {
+            alert("A nota não pode ser maior que 10.")
+        }else {
+            alert("Infelizmente, não foi desta vez...")
+        }
+
+        
+
+    }
+</script>
+</script>
+
+<style>
+    div{
+        height: 20px;
+        width: 400px;
+        border-radius: 20px;
+        margin: 20px;
+    }
+    button{
+        background-color: rgb(6, 6, 54);
+        color: white;
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid rgb(6, 6, 54);
+    }
+    h1 {
+        color:  rgb(6, 6, 54);
+        
+    }
+</style>

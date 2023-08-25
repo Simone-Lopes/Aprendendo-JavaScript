@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+
+<body>
+    <center>
+        <h1>Validação de candidatos a piloto</h1>
+        Intervalo altura inicial: <input type="number" id="input_alturaInicial"
+            placeholder="Altura inicial de seleção" /><br />
+        Intervalo altura final: <input type="number" id="input_alturaFinal"
+            placeholder="Altura final de seleção" /><br />
+        <br /> <br />
+        Nome do piloto: <input type="text" id="input_nomePiloto" placeholder="Nome do candidato" /><br />
+        Altura do piloto: <input type="text" id="input_alturaPiloto" placeholder="Altura do candidato" /><br />
+        <br />
+        <button onclick="validacao()"> Analisar </button>
+        <br /><br />
+        <div id="div_resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function validacao() {
+        var alturaInicial = Number(input_alturaInicial.value);
+        var alturaFinal = Number(input_alturaFinal.value);
+        var nome = (input_nomePiloto.value);
+        var altura = (input_alturaPiloto.value);
+
+        if (alturaInicial > 1 && alturaInicial <= alturaFinal) {
+            if (altura >= alturaInicial && altura <= alturaFinal) {
+                div_resultado.innerHTML = `O candidato ${nome} com altura de ${altura}m participará do processo de seleção de piloto!.`
+            } else {
+                div_resultado.innerHTML = `Infelizmente o candidato ${nome} com altura de ${altura}m não atende os requisitos.`
+            }
+        } else {
+            alert("Impossível prosseguir. A altura inicial tem que ser maior que 1m e a altura final deve ser maior que a inicial.");
+        }
+
+    }
+</script> -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+    <center>
+        <h1>Monitoração de horas em SITCOM!</h1>
+        O último sitcom assistido: <input id="input_sitcom" type="text"><br>
+        Total de episódios assistidos: <input id="input_episodios" type="number"><br><br>
+        <button onclick="calcular()"> Verificar Nível </button><br><br>
+
+        <div id="div_resultado">
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var sitcom = input_sitcom.value;
+        var eps = Number(input_episodios.value);
+        var tempoTotal = eps * 22;
+        var tempoHoras = tempoTotal / 60;
+
+        div_resultado.innerHTML = `Vejo que você gosta da série ${sitcom}.`
+
+        if(tempoHoras >= 30){
+            div_resultado.innerHTML += `<br>Uau, você realmente é fã dessa série!
+            <br><br><b>Total de horas assistidas:</b> ${tempoHoras} horas. `
+            }
+        }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <center>
+        <h1>Verificando a temperatura!</h1>
+    Digite a temperatura atual: <input type="number" id="input_temperatura">°C
+    <br> <br>
+    <button onclick="situacao()"> Ver situação </button>
+    </center>
+</body>
+</html>
+<script>
+    function situacao() {
+        var temp = Number(input_temperatura.value);
+
+        if(temp <= 24 && temp >= 21){
+            alert("Temperatura confortável :)");
+        }else{
+            alert("Temperatura desconfortável :(")
+        }
+
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <center>
+        <h1>Jo Ken Po</h1>
+        <button onclick="jogar()">Jogar</button>
+        <br><br>
+        <img id="img_jogo" src="" alt="">
+    </center>
+</body>
+</html>
+<script>
+    var listaImagem = [
+        'https://www.bigmae.com/wp-content/uploads/2010/07/pedra.png',
+        'https://www.bigmae.com/wp-content/uploads/2010/07/papel.png',
+        'https://www.bigmae.com/wp-content/uploads/2010/07/tesoura.png'];
+
+    function jogar(){
+
+        var limite = listaImagem.length -1;
+        var aleatorio = Math.random() * limite;
+        var formatado = aleatorio.toFixed();
+        
+        console.log(formatado);
+
+        img_jogo.src= listaImagem[formatado]
+
+
+
+    }
+</script>
+<style>
+img{
+    height: 200px;
+}
+</style>

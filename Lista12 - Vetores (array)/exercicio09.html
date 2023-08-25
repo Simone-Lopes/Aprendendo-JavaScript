@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+
+<body>
+    <center>
+        <h1>Organizando Projetos</h1>
+        Digite seus projetos: <input type="text" id="input_projeto">
+        <br><br>
+        <button onclick="cadastrarProjeto()">Registrar projeto</button>
+        <button onclick="mostrar()">Mostrar Projetos</button>
+        <br><br>
+        <div id="div_projeto"></div>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    var listaProjeto = [];
+
+    function cadastrarProjeto() {
+        var projeto = input_projeto.value;
+        listaProjeto.push(projeto);
+        
+        div_projeto.innerHTML = `Você já fez ${listaProjeto.length} projetos. `;
+
+        if(listaProjeto.length >= 0 && listaProjeto.length <= 4){
+            div_projeto.innerHTML += `Por isso você é um profissional Júnior <br>`;
+        }else if(listaProjeto.length >= 5 && listaProjeto.length <= 12){
+            div_projeto.innerHTML += `Por isso você é um profissional Pleno desde o projeto "${listaProjeto[3]}" <br>`;
+        }else if(listaProjeto.length >= 13){
+            div_projeto.innerHTML += `Por isso você é um profissional Sênior desde o projeto "${listaProjeto[12]}" <br>`;
+        }
+
+
+    }
+
+    function mostrar(){
+         for (var posicao = 0; posicao < listaProjeto.length; posicao++) {
+            var projetoLista = listaProjeto[posicao];
+            div_projeto.innerHTML += `${projetoLista}<br>`;
+            
+        }
+    }
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 05</title>
+</head>
+<body>
+    <center>
+    <h1> Transporte Público </h1>
+    Qual o valor da passagem? <input type="number" id="valor_passagem"><br>
+    Quantas viagens por mês? <input type="number" id="qtd_mes"><br>
+    Qual a distância? (em km) <input type="number" id="distancia_km"><br>
+    <br>
+    <button onclick="calcularVT()">Calcular VT</button>
+
+    <br><br>
+    <h3>
+        <div id="div_manipulavel">
+
+         </div>
+    </h3>
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    function calcularVT() {
+
+        div_manipulavel.style.background = "#f16f6f";
+        div_manipulavel.style.border = "2px solid black";
+
+        var valor = Number(valor_passagem.value);
+        var quantidade = Number(qtd_mes.value);
+        var distancia = Number(distancia_km.value);
+
+        var onibus = quantidade * 0.90;
+        var uber = quantidade * 0.10;
+
+        var preco_uber = (uber * distancia) * 0.75;
+        var preco_onibus = onibus * valor;
+        var preco_total = preco_onibus + preco_uber;
+
+        div_manipulavel.innerHTML = (`<br>Você vai gastar R$${preco_total} por mês.<br><br>`);
+    }
+
+</script>
+
+<style>
+ 
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #ff0077;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

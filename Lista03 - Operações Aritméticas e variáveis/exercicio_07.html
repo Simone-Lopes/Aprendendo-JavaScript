@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <center>
+        <h1>Bilhete Único de Estudante!</h1>
+        Digite o valor da passagem inteira: <input type="number" id="valorPassagem">
+        <br>
+        Digite quantas viagens por mês: <input type="number" id="quantasViagens">
+        <br><br>
+        <button onclick= "calcularEco()">Ver economia</button>
+    </center>
+</body>
+</html>
+
+<script>
+
+function calcularEco(){
+    
+    var PASSAGEM = valorPassagem.value;
+    var VIAGENS = quantasViagens.value;
+    var ECONOMIA = (PASSAGEM * VIAGENS) / 2;
+
+    alert("Você economizará R$" + ECONOMIA + " por mês por ser estudante!");
+
+} 
+
+</script>
+
+<style>
+
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #4CAF50;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

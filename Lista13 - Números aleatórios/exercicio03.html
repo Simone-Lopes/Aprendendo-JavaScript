@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+
+<body>
+    <center>
+        <h1>Gire o Dado!</h1>
+        <button onclick="sortearDado()">Sortear dado</button>
+        <div class="div_mensagem" id="div_mensagem"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+    var listaDado = ['https://dado.online/dado1.png',
+        'https://dado.online/dado2.png',
+        'https://dado.online/dado3.png',
+        'https://dado.online/dado4.png',
+        'https://dado.online/dado5.png',
+        'https://dado.online/dado6.png'
+    ]
+
+    function sortearDado() {
+        var limite = listaDado.length - 1;
+        var aleatorio = Math.random() * limite;
+        var formatado = Number(aleatorio.toFixed());
+
+        alert(formatado+1);
+
+        div_mensagem.innerHTML = `<br><img src="${listaDado[formatado]}" alt="">`
+    }
+
+</script>
+
+<style>
+    .div_mensagem img {
+        height: 150px;
+    }
+</style>

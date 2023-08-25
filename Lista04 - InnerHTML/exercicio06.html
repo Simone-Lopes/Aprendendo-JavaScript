@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 06</title>
+</head>
+<body>
+    <center>
+    <h1>Dragon Ball</h1>
+    Ki base: <input type="number" id="ki_base">
+    <p>Transformar em...</p>
+    <button onclick="transformar_ssj()"> SSJ </button>
+    <button onclick="transformar_ssj2()"> SSJ2 </button>
+    <button onclick="transformar_ssj3()"> SSJ3 </button>
+
+    <div id="div_manipulavel"> </div>
+    </center>
+</body>
+</html>
+
+<script>
+    function transformar_ssj() {
+        var num = Number(ki_base.value);
+        var ki = num * 50;
+        var ssj = "Super SayaJin"
+
+        div_manipulavel.innerHTML= (`<br>Após se transformar em ${ssj}, o KI desse Sayajin passa a ser de ${ki}`);
+    }
+    function transformar_ssj2() {
+        var num = Number(ki_base.value);
+        var ki2 = num * 100;
+        var ssj2 = "Super SayaJin 02"
+
+        div_manipulavel.innerHTML= (`<br>Após se transformar em ${ssj2}, o KI desse Sayajin passa a ser de ${ki2}`)
+    }
+
+    function transformar_ssj3() {
+        var num = Number(ki_base.value);
+        var ki3 = num * 200;
+        var ssj3 = "Super SayaJin 03"
+
+        div_manipulavel.innerHTML= (`<br>Após se transformar em ${ssj3}, o KI desse Sayajin passa a ser de ${ki3}`)
+    }
+
+</script>

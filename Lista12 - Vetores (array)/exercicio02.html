@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <center>
+        <h1>Agência de viagens</h1>
+        Destino de viagem: <input id="input_destino">
+        <button onclick="destino()"> Adicionar </button>
+        <br><br>
+        <button onclick="primeira()">Primeira Viagem</button>
+        <button onclick="terceira()">Terceira Viagem</button>
+        <button onclick="ultima()">Última Viagem</button>
+        <br>
+        <div id="div_mensagem"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    var listaDestino = [];
+
+    function destino() {
+        var destino = input_destino.value;
+        listaDestino.push(destino);
+    }
+
+    function primeira() {
+
+        if (listaDestino.length == 0) {
+            div_mensagem.innerHTML = `Não há viagens disponíveis.`;
+        } else
+            div_mensagem.innerHTML = listaDestino[0];
+    }
+
+    function terceira() {
+
+        if (listaDestino.length < 3) {
+            div_mensagem.innerHTML = `Não há viagens disponíveis.`;
+        } else {
+            div_mensagem.innerHTML = listaDestino[2];
+        }
+    }
+
+    function ultima() {
+
+        if (listaDestino.length == 0) {
+            div_mensagem.innerHTML = `Não há viagens disponíveis.`;
+        } else {
+            
+            div_mensagem.innerHTML = listaDestino[listaDestino.length -1];
+        }
+    }
+
+</script>

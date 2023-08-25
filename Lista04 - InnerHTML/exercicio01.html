@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 01</title>
+</head>
+<body>
+    <center>
+    <h1> Calcule seu sono! </h1>
+    Digite quantas horas você dormiu: <input type="number" id="horasSono">
+    <br><br>
+    <button onclick="calcular()">Calcular Sono</button>
+    <br><br>
+
+    <h3>
+
+    <div id="div_sono"></div>
+    
+    </h3>
+    </center>
+</body>
+</html>
+<script>
+    function calcular(){
+        var horas_dormidas = Number(horasSono.value);
+        var fase01 = (horas_dormidas * 5) / 100;
+        var fase02 = (horas_dormidas * 45) / 100;
+        var fase03 = (horas_dormidas * 30) / 100;
+        var faseRem = (horas_dormidas * 20) / 100;
+
+        div_sono.innerHTML = (`<br>Ao dormir ${horas_dormidas} horas, você dormiu: <br>
+        ${fase01} horas na fase 1 <br>
+        ${fase02} horas na fase 2 <br>
+        ${fase03} horas na fase 3 <br>
+        ${faseRem} horas na fase REM <br><br>`);
+
+        div_sono.style.background = "#7aca7d";
+        div_sono.style.border = "2px solid black";
+    }
+</script>
+
+<style>
+
+    button{
+        background-color: white;
+        color: rgb(54, 54, 54);
+        border: 2px solid #4CAF50;
+        padding:10px;
+        width: 250px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+
+    }
+    input {
+        border-radius: 10px;
+        font-size: large;
+    }
+
+</style>

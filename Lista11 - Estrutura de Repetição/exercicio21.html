@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 24</title>
+</head>
+
+<body>
+    <center>
+        <h1>Números Primos</h1>
+        Digite um número entre 0 e 100 <input type="number" id="input_number">
+        <br><br>
+        <button onclick="resultado()">Ver divisores</button>
+        <br><br>
+        <div id="div_resultado"></div>
+        <br><br>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function resultado() {
+        var numero = Number(input_number.value);
+
+        if (numero < 0 || numero > 100) {
+            alert("ERRO: O número deve estar entre 0 e 100");
+        } else {
+            div_resultado.innerHTML += `Divisores do número 10: <br>`;
+            for (var contador = 0; contador <= numero; contador++) {
+                if (numero % contador == 0) {
+                    div_resultado.innerHTML += `${contador}<br>`;
+                }
+
+            }
+        }
+    }
+</script>

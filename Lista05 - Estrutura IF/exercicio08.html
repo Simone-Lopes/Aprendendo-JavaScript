@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+<body>
+    <center>
+        <h1>Bem-vindo ao elevador!</h1>
+        Homens no elevador: <input id="input_qtdHomens" type="number"><br>
+        Mulheres no elevador: <input id="input_qtdMulheres" type="number"><br><br>
+        <button onclick="calcular()"> Analisar peso</button><br><br>
+
+        <div id="div_resultado">
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var totalMulheres = Number(input_qtdMulheres.value) * 60;
+        var totalHomens = Number(input_qtdHomens.value) * 80;
+        var totalElevador = totalMulheres + totalHomens;
+
+        div_resultado.innerHTML = `Este elevador suporta 800 kg e o peso estimado desta lotação é de ${totalElevador}kg.`
+
+        if(totalElevador > 800){
+            div_resultado.innerHTML += `<span style="color: blue"> <br> Será necessário descer alguém para que o elevador se movimente!!!</span>`
+        }
+    }
+</script>

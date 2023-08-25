@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 02</title>
+</head>
+<body>
+    <center>
+    <h1>Peso e Altura</h1>
+    <h3>Digite seu peso: <input id="pesoUsuario" type="number">
+    <br>
+    Digite sua altura: <input id="alturaUsuario" type="number">
+    <br><br></h3>
+    <button onclick="exibirMsg()"> Fale comigo! </button>
+    </center>
+</body>
+</html>
+
+<script>
+    function exibirMsg() {
+        alert("Você pesa " + pesoUsuario.value + "Kg e tem " + alturaUsuario.value + "m de altura.")
+    }
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+   <center>
+      <h1>Linhas de ônibus!</h1>
+      Nome da linha <input id="input_nome"> </br>
+      Pesquisar linha <input id="input_pesquisar"></br></br>
+
+
+    <button onclick="gravar()">Gravar buzão</button>
+    <button onclick="pesquisar()">Pesquisar buzão</button>
+
+    <div id="div_result"></div>
+    <div id="div_result2"></div>
+   </center>
+    
+
+</body>
+
+</html>
+<script>
+
+    lista_onibus = []
+
+
+    function gravar() {
+        var nome = input_nome.value
+        lista_onibus.push(nome);
+        div_result.innerHTML = ``;
+
+        for (var i = 0; i < lista_onibus.length; i++) {
+            div_result.innerHTML += ` ${i+1}
+            ${lista_onibus[i]} </br>`
+        }
+    }
+
+
+    function pesquisar() {
+
+        lista_pesquisar = []
+
+        var pesquisar = input_pesquisar.value;
+
+        div_result2.innerHTML = ``;
+
+        for (var i = 0; i < lista_onibus.length; i++) {
+
+            if (lista_onibus[i] == pesquisar) {
+                lista_pesquisar.push(i + 1);
+
+            }
+        }
+
+        var linha = lista_onibus[i];
+
+        if (linha == 0) {
+            div_result2.innerHTML = `Você nunca pegou essa linha`
+
+        } else {
+            var total = lista_pesquisar.length;
+            div_result2.innerHTML = `Você já pegou essa linha ${total} vezes, nessa ordem: ${lista_pesquisar}  `
+
+        }
+    }
+
+
+</script>

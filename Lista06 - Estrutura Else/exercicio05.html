@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <center>
+        <h1> Avaliação de alunos</h1>
+        <br>
+         Nota 01: <input id="input_nota01" type="number"><br>
+         Nota 02: <input id="input_nota02" type="number"><br>
+        <br>
+        <button onclick="media()">Avaliar Situação</button>
+        <br><br>
+        <div id="div_resultado"></div> 
+    </center>
+    
+</body>
+</html>
+<script>
+    function media(){
+        var nota1= Number(input_nota01.value);
+        var nota2= Number(input_nota02.value);
+        var media = (nota1 + nota2) / 2;
+
+
+        if(media >= 6){
+            div_resultado.innerHTML = `<br>Parabéns, aprovado!<br><br>` 
+            div_resultado.style.background = "green";
+            div_resultado.style.color = "white";
+        } else{
+            div_resultado.innerHTML = `<br>Poxa! Tente outra vez...<br><br>` 
+            div_resultado.style.background = "red";
+            div_resultado.style.color = "white";
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <center>
+        <h1>Sortear time</h1>
+        <button onclick="sortearTime()">Sortear time</button>
+        <div class="div_mensagem" id="div_mensagem"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+    var listaNum = ['https://logodownload.org/wp-content/uploads/2015/05/palmeiras-logo-0.png',
+
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png',
+
+        'https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/874.png',
+
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/1200px-Flamengo_braz_logo.svg.png'
+    ]
+
+    function sortearTime() {
+        var limite = listaNum.length - 1;
+        var aleatorio = Math.random() * limite;
+        var formatado = Number(aleatorio.toFixed());
+
+        alert(formatado);
+
+        div_mensagem.innerHTML = `<img src="${listaNum[formatado]}" alt="">`
+    }
+
+</script>
+
+<style>
+    .div_mensagem img {
+        height: 150px;
+    }
+</style>

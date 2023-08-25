@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <center>
+        <h1>Consultoria do Netflix!</h1>
+    Hora de acesso ao Netflix: <input type="number" id="input_horas"/>
+    <br/> <br/>
+    <button onclick="situacao()"> Ver recomendação </button>
+    <br/>
+    <div id="div_resultado"></div>
+    <br/>
+    </center>
+</body>
+</html>
+<script>
+    function situacao() {
+        var hora = Number(input_horas.value);
+
+        if(hora >= 19 && hora <= 21){
+            div_resultado.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${hora}h.`;
+        }else{
+            div_resultado.innerHTML = `O horário ${hora}h é adequado para assistir sua série favorita!`;
+        }
+
+    }
+</script>
